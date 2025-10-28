@@ -121,11 +121,10 @@ The frontend will run on http://localhost:5173
 
 ### ☁️ Deployment
 
-**Frontend:** Deployed on [Netlify](https://transliteration-romanized-devanagari.netlify.app/)
-**Backend:** Deployed on [Fly.io](https://transliteration.fly.dev/), configured using **Dockerfile**.
+-- **Frontend:** Deployed on [Netlify](https://transliteration-romanized-devanagari.netlify.app/)
+-- **Backend:** Deployed on [Fly.io](https://transliteration.fly.dev/), configured using **Dockerfile**.
 
 ---
-
 
 ### 🔎Example Usage
 
