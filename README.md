@@ -1,12 +1,16 @@
-# 🔡 Transliteration: Romanized to Devanagari using Seq2Seq LSTM
+# 🔤 --> न Transliteration: Romanized to Devanagari using Seq2Seq LSTM
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![React](https://img.shields.io/badge/React-18.2.0-blue)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3.5.3-blue)
 ![Flask](https://img.shields.io/badge/Flask-2.3.3-lightgrey)
-![Render](https://img.shields.io/badge/Deployment-Render-blue)
-![Netlify](https://img.shields.io/badge/Frontend-Netlify-green)
+![Fly.io](https://img.shields.io/badge/Deployment-Fly.io-8A2BE2?logo=flydotio&logoColor=white)
+![Netlify](https://img.shields.io/badge/Frontend-Netlify-00C7B7?logo=netlify&logoColor=white)
 [![Live Demo](https://img.shields.io/badge/Live-Demo-green)](https://transliteration-romanized-devanagari.netlify.app/)
+
+---
+
+## 🚀 Project Overview
 
 This project implements an **AI-based transliteration system** that converts **Romanized Hindi text (e.g., "ghar", "namaste") into Devanagari script (e.g., "घर", "नमस्ते")** using a **Sequence-to-Sequence (Seq2Seq) architecture** with **LSTM (Long Short-Term Memory)** networks.  
 
@@ -14,17 +18,18 @@ The application includes both **model training and web deployment**, making it a
 
 ---
 
-## 🚀 Project Overview
-
 ### 🏦 Model Architecture
 The transliteration system is built using a **Seq2Seq neural network**:
 
 - **Encoder**: Reads Latin characters and converts them into dense hidden representations.  
 - **Decoder**: Predicts Devanagari output one character at a time.  
 - **RNN Cell**: LSTM (4-gate structure: input, forget, output, and cell gates).  
-- **Framework**: PyTorch.  
+- **Framework**: PyTorch.
+
+---
 
 ### ⚙️ Model Configuration
+
 | Parameter | Symbol | Value |
 |------------|---------|--------|
 | Embedding Dimension | E | 128 |
@@ -45,6 +50,8 @@ The transliteration system is built using a **Seq2Seq neural network**:
 **Formula Used:**
 Params = (Vₛ + Vₜ)×E + 2×g×(E×H + H² + H) + H×Vₜ + Vₜ
 where `g = 4` (LSTM gates)
+
+---
 
 ### ⚙️ Computation Estimate (MACs)
 **Approximate Computations:** 15,728,640 MACs per sequence  
@@ -110,10 +117,15 @@ npm run dev
 ```
 The frontend will run on http://localhost:5173
 
+---
+
 ### ☁️ Deployment
 
 **Frontend:** Deployed on [Netlify](https://transliteration-romanized-devanagari.netlify.app/)
-**Backend:** Deployed on [Render](https://transliteration-k9f3.onrender.com)
+**Backend:** Deployed on [Fly.io](https://transliteration.fly.dev/), configured using **Dockerfile**.
+
+---
+
 
 ### 🔎Example Usage
 
@@ -124,7 +136,28 @@ The frontend will run on http://localhost:5173
 | pyaar             | प्यार               |
 | dosti             | दोस्ती              |
 
+---
+
 ### 🏁 Conclusion
 
 This project successfully demonstrates a deep-learning-based transliteration system capable of converting Romanized String (ghar) to Devanagari (घर) using a Seq2Seq LSTM model.
 It combines a robust neural model with a clean and functional web interface, making it a powerful example of AI-driven linguistic technology.
+
+---
+
+## 🧑‍💻 Colab Integration
+
+After experimenting with UI:
+Click “**Run in Google Colab**” to explore the notebook interactively.
+
+---
+
+## 🙋‍♂️ Author
+
+**Rohith Reddy.G.K**  
+🔗 [GitHub Profile](https://github.com/RohithReddyGK)  
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/rohithreddygk)
+
+---
+
+### 🌟 **If you like this project, give it a ⭐ **
