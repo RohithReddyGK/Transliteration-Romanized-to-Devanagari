@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+const BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://127.0.0.1:5000"
+
 const ModelExplanation = ({ model_info }) => {
   const [info, setInfo] = useState(model_info || null);
 
@@ -7,7 +9,7 @@ const ModelExplanation = ({ model_info }) => {
     if (!info) {
       const fetchInfo = async () => {
         try {
-          const res = await fetch("http://127.0.0.1:5000/model_info");
+          const res = await fetch(`${BASE_URL}/model_info`);
           const data = await res.json();
           setInfo(data);
         } catch (err) {

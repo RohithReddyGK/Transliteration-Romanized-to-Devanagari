@@ -2,17 +2,19 @@ import { useState, useEffect } from "react";
 import TransliterationBox from "./components/TransliterationBox";
 import ModelExplanation from "./components/ModelExplanation";
 
+const BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://127.0.0.1:5000"
+
 function App() {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [modelInfo, setModelInfo] = useState(null); 
+  const [modelInfo, setModelInfo] = useState(null);
 
   // Fetch model info once on page load
   useEffect(() => {
     const fetchModelInfo = async () => {
       try {
-        const res = await fetch("http://127.0.0.1:5000/model_info");
+        const res = await fetch(`${BASE_URL}/model_info`);
         const data = await res.json();
         console.log("Fetched model info:", data);
         setModelInfo(data);
@@ -28,7 +30,7 @@ function App() {
     if (!input.trim()) return;
     setLoading(true);
     try {
-      const res = await fetch("http://127.0.0.1:5000/transliterate", {
+      const res = await fetch(`${BASE_URL}/transliterate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ word: input }),
